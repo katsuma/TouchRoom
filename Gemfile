@@ -4,6 +4,7 @@ gem 'rake'
 
 # Add your dependencies here:
 gem 'sugarcube', :require => 'sugarcube-classic'
+gem 'bubble-wrap', :require => 'bubble-wrap/all'
 
 group :spec do
   gem 'motion-redgreen'
