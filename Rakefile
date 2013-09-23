@@ -18,3 +18,5 @@ Motion::Project::App.setup do |app|
   app.name = 'TouchRoom'
   app.redgreen_style = :full if testing
 end
+
+#MotionBundler.setup
