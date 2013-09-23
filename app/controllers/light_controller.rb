@@ -10,22 +10,9 @@ class LightController < UIViewController
 
   def viewDidLoad
     super
-    self.view.backgroundColor = UIColor.whiteColor
-
-    init_buttons
+    self.view = LightView.alloc.initWithFrame(view.frame, andViewController: self)
   end
 
-
-  def init_buttons
-    @on_button = UIButton.buttonWithType UIButtonTypeRoundedRect
-    @on_button.setTitle 'ON', forState: UIControlStateNormal
-    @on_button.frame = [[100, 100], [100, 50]]
-    @on_button.addTarget(self,
-      action: 'signal_to:',
-      forControlEvents: UIControlEventTouchUpInside
-    )
-    self.view <<  @on_button
-  end
 
   def signal_to(sender)
     button = sender
